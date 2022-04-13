@@ -1,10 +1,14 @@
 -- MySQL read only user
 
+```SQL
 CREATE USER 'classicmodels'@'%' IDENTIFIED BY 'classicmodels';
 GRANT SELECT, SHOW VIEW on classicmodels.* TO 'classicmodels'@'%';
 FLUSH PRIVILEGES;
+```
 
 -- SQL Server super user
+
+```SQL
 create LOGIN DWSRVC WITH PASSWORD = 'DWSRVC'
 GO
 
@@ -18,3 +22,7 @@ BEGIN
 	EXEC sp_addrolemember N'db_owner',N'DWSRVC'
 END;
 GO
+```
+
+After creating the user in SQL Server, enable SQL Server Authentication mode. Also enable login through TCP/IP mode.
+Either of the changes require the SQL Server instance to be restarted.
