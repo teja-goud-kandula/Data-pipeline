@@ -1,0 +1,11 @@
+Database name: pdi_logging
+
+Transformation Logging:
+    Transformation: TRANS_LOG
+    Step:           TRANS_STEP_LOG
+
+Job Logging:
+    Job log table:  JOB_LOG
+    Job entry log table: JOB_ENTRY_LOG
+    Logging channel log table: LOG_CHANNEL
+    Checkpoints log table : CHECKPOINT 
